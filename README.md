@@ -4,7 +4,10 @@
 ## Version 1
 
 ### Improved Battle AI
-(add flowchart & explanation here)
+Improve AI such that:
+1) Trainers can make intelligent switches if they are at a disadvantage.
+2) Trainers can predict when the player switches based on experience.
+3) Trainers send in the Pokemon which pressures their opponents the most.
 
 ### No Trade Evolutions
 All trade evolutions will be replaced by friendship evolutions.
@@ -13,7 +16,8 @@ All trade evolutions will be replaced by friendship evolutions.
 The following Pokemon will receive boosts to their stats and abilities:
 - Slugma/Magcargo (boost stats, add possible "Drought" ability).
 - Baltoy/Claydol (replace "Levitate" by "Sandstorm").
-- Corsola (boost stats, add possible "Drizzle" ability).
+- Corsola (boost stats, add possible "Raindish" ability).
+- Surskit/Masquerain (boost stats, change typing, give "Drizzle").
 
 ### Stronger Trainers
 Improve IVs of trainer Pokemon and change AI Flags to 0x7 for all trainers.
