@@ -1,7 +1,24 @@
 (This is a fork from https://github.com/pret/)
 
 # Planned Changes
-## Version 1
+
+## Version 1.0
+
+### Advanced Rules
+1) No heal/boost items during battle.
+2) Battle mode to "BattleModeSet".
+
+### No Trade Evolutions
+All trade evolutions will be replaced by friendship evolutions.
+
+### Stronger Trainers
+Improve IVs of trainer Pokemon and change AI Flags to 0x7 for all trainers.
+
+### Complete Hoenn Dex
+All Pokemon from the Hoenn Dex can be caught in both games (no trades necessary).
+
+### Access Mystery Island
+Make Mystery Island appear more often.
 
 ### Improved Battle AI
 Improve AI such that:
@@ -9,8 +26,7 @@ Improve AI such that:
 2) Trainers can predict when the player switches based on experience.
 3) Trainers send in the Pokemon which pressures their opponents the most.
 
-### No Trade Evolutions
-All trade evolutions will be replaced by friendship evolutions.
+## Version 2
 
 ### Help the Weak
 The following Pokemon will receive boosts to their stats and abilities:
@@ -19,27 +35,17 @@ The following Pokemon will receive boosts to their stats and abilities:
 - Corsola (boost stats, add possible "Raindish" ability).
 - Surskit/Masquerain (boost stats, change typing, give "Drizzle").
 
-### Stronger Trainers
-Improve IVs of trainer Pokemon and change AI Flags to 0x7 for all trainers.
-
-### Complete Hoenn Dex
-All Pokemon from the Hoenn Dex can be caught in both games (no trades necessary).
+### More Shinies
+Make shiny Pokemon slightly more common.
 
 ### Interesting In-game Trades
 The following in-game trades will be added:
 - Perfect IV Corsola for some rare other Pokemon.
 - More coming soon
 
-## Version 2
-
-### More Shinies
-Make shiny Pokemon slightly more common.
-
 ### Improved Trainer Teams
 Give the gym leaders, elite four members, and team aqua/magma more balanced and stronger teams.
 
-# Changelog
-Nothing here.
 
 # Pokémon Ruby and Sapphire [![Build Status][travis-badge]][travis]
 
