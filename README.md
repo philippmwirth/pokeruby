@@ -26,7 +26,7 @@ Improve AI such that:
 2) Trainers can predict when the player switches based on experience.
 3) Trainers send in the Pokemon which pressures their opponents the most.
 
-## Version 2
+## Version 2.0
 
 ### Help the Weak
 The following Pokemon will receive boosts to their stats and abilities:
@@ -35,13 +35,10 @@ The following Pokemon will receive boosts to their stats and abilities:
 - Corsola (boost stats, add possible "Raindish" ability).
 - Surskit/Masquerain (boost stats, change typing, give "Drizzle").
 
-### More Shinies
-Make shiny Pokemon slightly more common.
-
 ### Interesting In-game Trades
 The following in-game trades will be added:
 - Perfect IV Corsola for some rare other Pokemon.
-- More coming soon
+- More coming soon...
 
 ### Improved Trainer Teams
 Give the gym leaders, elite four members, and team aqua/magma more balanced and stronger teams.
