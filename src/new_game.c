@@ -84,7 +84,8 @@ void SetDefaultOptions(void)
     gSaveBlock2.optionsTextSpeed = OPTIONS_TEXT_SPEED_MID;
     gSaveBlock2.optionsWindowFrameType = 0;
     gSaveBlock2.optionsSound = OPTIONS_SOUND_MONO;
-    gSaveBlock2.optionsBattleStyle = OPTIONS_BATTLE_STYLE_SHIFT;
+     // change default: OPTIONS_BATTLE_STYLE_SHIFT to OPTIONS_BATTLE_STYLE_SET
+    gSaveBlock2.optionsBattleStyle = OPTIONS_BATTLE_STYLE_SET;
     gSaveBlock2.optionsBattleSceneOff = FALSE;
     gSaveBlock2.regionMapZoom = FALSE;
 }
