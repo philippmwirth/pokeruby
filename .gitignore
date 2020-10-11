@@ -44,3 +44,4 @@ build/
 .projects/ARM/
 *.diff
 porymap.project.cfg
+stronger_trainers.sh
