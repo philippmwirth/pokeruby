@@ -8813,9 +8813,9 @@
                 "species": "SPECIES_DODRIO"
               },
               {
-                "min_level": 29,
-                "max_level": 29,
-                "species": "SPECIES_PINSIR"
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_MUDKIP"
               }
             ]
           },
@@ -8967,9 +8967,9 @@
                 "species": "SPECIES_XATU"
               },
               {
-                "min_level": 29,
-                "max_level": 29,
-                "species": "SPECIES_HERACROSS"
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_TORCHIC"
               }
             ]
           },
@@ -9068,7 +9068,7 @@
               {
                 "min_level": 29,
                 "max_level": 29,
-                "species": "SPECIES_WOBBUFFET"
+                "species": "SPECIES_TREECKO"
               }
             ]
           },
@@ -18252,9 +18252,9 @@
                 "species": "SPECIES_DODRIO"
               },
               {
-                "min_level": 29,
-                "max_level": 29,
-                "species": "SPECIES_PINSIR"
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_MUDKIP"
               }
             ]
           },
@@ -18406,9 +18406,9 @@
                 "species": "SPECIES_XATU"
               },
               {
-                "min_level": 29,
-                "max_level": 29,
-                "species": "SPECIES_HERACROSS"
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_TORCHIC"
               }
             ]
           },
@@ -18507,7 +18507,7 @@
               {
                 "min_level": 29,
                 "max_level": 29,
-                "species": "SPECIES_WOBBUFFET"
+                "species": "SPECIES_TREECKO"
               }
             ]
           },
