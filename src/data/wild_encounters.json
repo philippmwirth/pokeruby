@@ -9066,8 +9066,8 @@
                 "species": "SPECIES_PIKACHU"
               },
               {
-                "min_level": 29,
-                "max_level": 29,
+                "min_level": 15,
+                "max_level": 15,
                 "species": "SPECIES_TREECKO"
               }
             ]
@@ -18505,8 +18505,8 @@
                 "species": "SPECIES_PIKACHU"
               },
               {
-                "min_level": 29,
-                "max_level": 29,
+                "min_level": 15,
+                "max_level": 15,
                 "species": "SPECIES_TREECKO"
               }
             ]
