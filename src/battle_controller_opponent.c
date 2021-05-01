@@ -1813,7 +1813,7 @@ void OpponentHandlecmd22(void)
         u8 r6;
         u8 r5;
 
-        r4 = GetMostSuitableMonToSwitchInto();
+        r4 = GetMostSuitableMonToSwitchInto(FALSE);
         if (r4 == 6)
         {
             if (!(gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
