@@ -34,6 +34,9 @@ The following gyms have weather effects:
 - Lavaridge Town Gym (drought)
 - Sootopolis City Gym (light rain)
 
+### No Overleveling
+When a Pokemon has a higher level than the strongest Pokemon of the next gym leader (or elite four member), it's disobedient.
+
 ## Version 2.0
 
 ### Help the Weak
@@ -88,16 +91,7 @@ SpDef | 82 | 80
 Speed | 80 | 90
 Total | 454 | 500
 
-The following Pokemon will receive boosts to their stats and abilities:
-- Slugma/Magcargo (boost stats, add possible "Drought" ability).
-- Baltoy/Claydol (replace "Levitate" by "Sandstorm").
-- Corsola (boost stats, add possible "Raindish" ability).
-- Surskit/Masquerain (boost stats, change typing, give "Drizzle").
-
-### Interesting In-game Trades
-The following in-game trades will be added:
-- Perfect IV Corsola for some rare other Pokemon.
-- More coming soon...
+Masquerains typing is changed to "Bug/Water".   
 
 ### Improved Trainer Teams
 Gym leaders, elite four members, and team aqua/magma have more balanced and stronger teams.

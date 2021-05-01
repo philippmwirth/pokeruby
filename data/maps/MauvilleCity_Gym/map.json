@@ -5,7 +5,7 @@
   "music": "MUS_GYM",
   "region_map_section": "MAPSEC_MAUVILLE_CITY",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_RAIN_HEAVY",
   "map_type": "MAP_TYPE_INDOOR",
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_GYM",
