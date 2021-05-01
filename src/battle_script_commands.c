@@ -28,6 +28,7 @@
 #include "ewram.h"
 #include "util.h"
 
+
 // TODO: put this into battle_controllers.h
 
 #define RET_VALUE_LEVELLED_UP   11
@@ -1415,6 +1416,115 @@ static void atk05_damagecalc(void)
         gBattleMoveDamage = gBattleMoveDamage * 15 / 10;
 
     gBattlescriptCurrInstr++;
+}
+
+
+s32 AI_SimulateDmg(u8 attacker, u8 defender, u16 move)
+{
+    int i = 0;
+    u8 moveType;
+    s32 battleMoveDamage;
+    u16 sideStatus = gSideStatuses[GET_BATTLER_SIDE(defender)];
+
+    battleMoveDamage = CalculateBaseDamage(&gBattleMons[attacker], &gBattleMons[defender], move,
+                                           sideStatus, 0, 0, attacker, defender);
+    battleMoveDamage = battleMoveDamage * gBattleStruct->dmgMultiplier;
+
+    if (gStatuses3[attacker] & STATUS3_CHARGED_UP && gBattleMoves[move].type == TYPE_ELECTRIC)
+        battleMoveDamage *= 2;
+    if (gProtectStructs[attacker].helpingHand)
+        battleMoveDamage = battleMoveDamage * 15 / 10;
+
+    if (move != MOVE_STRUGGLE)
+    {
+        moveType = gBattleMoves[move].type;
+
+        //check stab
+        if (gBattleMons[attacker].type1 == moveType || gBattleMons[attacker].type2 == moveType)
+        {
+            battleMoveDamage = battleMoveDamage * 15;
+            battleMoveDamage = battleMoveDamage / 10;
+        }
+        // check effectiveness
+        if (gBattleMons[defender].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+        {
+            battleMoveDamage = 0;
+        }
+        else
+        {
+            while (gTypeEffectiveness[i]!= TYPE_ENDTABLE)
+            {
+                if (gTypeEffectiveness[i] == moveType)
+                {
+                    //check type1
+                    if (gTypeEffectiveness[i + 1] == gBattleMons[defender].type1)
+                    {
+                        battleMoveDamage = battleMoveDamage * gTypeEffectiveness[i+2] / 10;
+                    }
+                    //check type2
+                    if (gTypeEffectiveness[i + 1] == gBattleMons[defender].type2 &&
+                        gBattleMons[defender].type1 != gBattleMons[defender].type2)
+                        battleMoveDamage = battleMoveDamage * gTypeEffectiveness[i+2] / 10;
+                }
+                i += 3;
+            }
+        }
+    }
+    return battleMoveDamage;
+}
+
+s32 AI_SimulateDmgOnSwitchIn(u8 attacker, u8 currentDefender, struct BattlePokemon *defender, u16 move)
+{
+    int i = 0;
+    u8 moveType;
+    s32 battleMoveDamage;
+    u16 sideStatus = gSideStatuses[GET_BATTLER_SIDE(currentDefender)];
+
+    battleMoveDamage = CalculateBaseDamage(&gBattleMons[attacker], defender, move,
+                                           sideStatus, 0, 0, attacker, 0);
+    battleMoveDamage = battleMoveDamage * gBattleStruct->dmgMultiplier;
+
+    if (gStatuses3[attacker] & STATUS3_CHARGED_UP && gBattleMoves[move].type == TYPE_ELECTRIC)
+        battleMoveDamage *= 2;
+    if (gProtectStructs[attacker].helpingHand)
+        battleMoveDamage = battleMoveDamage * 15 / 10;
+
+    if (move != MOVE_STRUGGLE)
+    {
+        moveType = gBattleMoves[move].type;
+
+        //check stab
+        if (gBattleMons[attacker].type1 == moveType || gBattleMons[attacker].type2 == moveType)
+        {
+            battleMoveDamage = battleMoveDamage * 15;
+            battleMoveDamage = battleMoveDamage / 10;
+        }
+        // check effectiveness
+        if (defender->ability == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+        {
+            battleMoveDamage = 0;
+        }
+        else
+        {
+            while (gTypeEffectiveness[i]!= TYPE_ENDTABLE)
+            {
+                if (gTypeEffectiveness[i] == moveType)
+                {
+                    //check type1
+                    if (gTypeEffectiveness[i + 1] == defender->type1)
+                    {
+                        battleMoveDamage = battleMoveDamage * gTypeEffectiveness[i+2] / 10;
+                    }
+                    //check type2
+                    if (gTypeEffectiveness[i + 1] == defender->type2 &&
+                        defender->type1 != defender->type2)
+                        battleMoveDamage = battleMoveDamage * gTypeEffectiveness[i+2] / 10;
+                }
+                i += 3;
+            }
+        }
+    }
+    return battleMoveDamage;
 }
 
 void AI_CalcDmg(u8 attacker, u8 defender)
