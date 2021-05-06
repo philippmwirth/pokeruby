@@ -37,6 +37,20 @@ The following gyms have weather effects:
 ### No Overleveling
 When a Pokemon has a higher level than the strongest Pokemon of the next gym leader (or elite four member), it's disobedient.
 
+Achievement | Obedience Level
+------------|----------------:|
+New Game | 16 
+Badge 1 | 18
+Badge 2 | 24
+Badge 3 | 30
+Badge 4 | 32
+Badge 5 | 35
+Badge 6 | 42
+Badge 7 | 48
+Badge 8 | 60
+Elite Four | 100
+
+
 ## Version 2.0
 
 ### Help the Weak
@@ -45,7 +59,7 @@ The following Pokemon have higher base stats:
 **Slugma**
 
 Stat | Before | After
------|--------|------
+-----|--------:|------:|
 HP | 40 | 80
 Atk | 40 | 40
 Def | 40 | 70
@@ -59,7 +73,7 @@ Slugma also receives the secondary type "Stone".
 **Magcargo**
 
 Stat | Before | After
------|--------|------
+-----|--------:|------:|
 HP | 60 | 100
 Atk | 50 | 50
 Def | 120 | 120
@@ -71,7 +85,7 @@ Total | 430 | 480
 **Corsola**
 
 Stat | Before | After
------|--------|------
+-----|--------:|------:|
 HP | 65 | 105
 Atk | 55 | 55
 Def | 95 | 105
@@ -82,7 +96,7 @@ Total | 410 | 480
 
 **Masquerain**
 Stat | Before | After
------|--------|------
+-----|--------:|------:|
 HP | 70 | 70
 Atk | 60 | 80
 Def | 62 | 60

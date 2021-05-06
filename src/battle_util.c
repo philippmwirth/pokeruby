@@ -23,6 +23,7 @@
 #include "constants/moves.h"
 #include "constants/species.h"
 #include "constants/weather.h"
+#include "overworld.h"
 
 extern u8 gUnknown_02023A14_50;
 
@@ -3492,25 +3493,56 @@ u8 IsMonDisobedient(void)
     s32 calc;
 
     if (gBattleTypeFlags & BATTLE_TYPE_LINK
-     || GetBattlerSide(gBattlerAttacker) == 1
-     || !IsOtherTrainer(gBattleMons[gBattlerAttacker].otId, gBattleMons[gBattlerAttacker].otName))
+     || GetBattlerSide(gBattlerAttacker) == 1)
 	return 0;
 
     if (DEBUG && (gUnknown_02023A14_50 & 0x40))
     {
-	obedienceLevel = 10;
+	    obedienceLevel = 10;
     }
     else
     {
-	if (FlagGet(FLAG_BADGE08_GET))
-	    return 0;
-	obedienceLevel = 10;
-	if (FlagGet(FLAG_BADGE02_GET))
-	    obedienceLevel = 30;
-	if (FlagGet(FLAG_BADGE04_GET))
-	    obedienceLevel = 50;
-	if (FlagGet(FLAG_BADGE06_GET))
-	    obedienceLevel = 70;
+        // level before first gym
+        obedienceLevel = 16; 
+
+        if (FlagGet(FLAG_BADGE01_GET)) {
+            // level before second gym
+            obedienceLevel = 18;
+        }
+        if (FlagGet(FLAG_BADGE02_GET)) {
+            // level before third gym
+            obedienceLevel = 24;
+        }
+        if (FlagGet(FLAG_BADGE03_GET)) {
+            // level before fourth gym
+            obedienceLevel = 30;
+        }
+        if (FlagGet(FLAG_BADGE04_GET)) {
+            // level before fifth gym
+            obedienceLevel = 32;
+        }
+        if (FlagGet(FLAG_BADGE05_GET)) {
+            // level before sixth gym
+            obedienceLevel = 35;
+        }
+        if (FlagGet(FLAG_BADGE06_GET)) {
+            // level before seventh gym
+            obedienceLevel = 42;
+        }
+        if (FlagGet(FLAG_BADGE07_GET)) {
+            // level before fourth gym
+            obedienceLevel = 48;
+        }
+        if (FlagGet(FLAG_BADGE08_GET)) {
+            // level before elite four
+            if (GetGameStat(GAME_STAT_ENTERED_HOF) > 0) {
+                // entered hall of fame, all Pokemon obey
+                return 0;
+            } else {
+                // max level of Steves strongest Pokemon
+                obedienceLevel = 60;
+            }
+        }
     }
 
     if (gBattleMons[gBattlerAttacker].level <= obedienceLevel)
